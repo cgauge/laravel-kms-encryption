@@ -1,0 +1,40 @@
+{
+  "name": "customergauge/encryption",
+  "description": "AWS KMS Encryption for Laravel",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["aws","kms", "laravel", "encryption", "key"],
+  "authors": [
+    {
+      "name": "Marco Deleu",
+      "email": "deleugyn@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.3",
+    "illuminate/contracts": "^8.12 || ^7.1",
+    "illuminate/support": "^8.12 || ^7.1",
+    "illuminate/config": "^8.12 || ^7.28"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.3",
+    "aws/aws-sdk-php": "^3.164"
+  },
+  "autoload": {
+    "psr-4": {
+      "CustomerGauge\\Encryption\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\CustomerGauge\\Encryption\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CustomerGauge\\Encryption\\Providers\\EncryptionServiceProvider"
+      ]
+    }
+  }
+}
